@@ -1,16 +1,28 @@
 # shopping_app_firebase
 
-A new Flutter project.
+A Flutter task to make  shopping application that allows users to sign up, sign in and browse products.
 
-## Getting Started
+## Folder Structure
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+- `lib/`: Contains the main code for the application.
+    - `signup_form.dart`: Contains the sign-up form.
+    - `login_form.dart`: Contains the login form.
+    - `main.dart`: Entry point of the application.
+    - `screens/`: Contains signup screen of the application.
+    - `widgets/`: Contains reusable widgets.
+    - `consts/url`: Contains url links to enhance the application style.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Applied Firebase
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `Firebase authentication` : In order to make cloud login and signup for the users
+- 
+### Applied Animation
+
+- `FadeTransition` : Fade transition applied on signup form before going to main page.
+
+### Adding Localization
+
+- `Arabic` : Adding Arabic language
+- `English` : Adding English language
+
