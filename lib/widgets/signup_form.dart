@@ -132,6 +132,7 @@ class _SignUpFormPageState extends State<SignUpFormPage> {
 
                     // Check if the user was successfully created
                     if (credential.user != null) {
+                      await credential.user!.updateDisplayName(nameController.text);
                       showDialog(
                         context: context,
                         barrierDismissible: false,

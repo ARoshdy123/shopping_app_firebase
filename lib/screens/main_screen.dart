@@ -1,5 +1,5 @@
-
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping_app_firebase/widgets/display_product.dart';
 import 'package:shopping_app_firebase/widgets/grid_view.dart';
@@ -13,6 +13,8 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  final user = FirebaseAuth.instance.currentUser;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +32,46 @@ class _MainScreenState extends State<MainScreen> {
             },
           ),
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: const BoxDecoration(
+                color: Colors.blue, // Change the background color if desired
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Centered avatar image
+                  const CircleAvatar(
+                    radius: 40,
+                    backgroundImage: AssetImage('assets/images/myavatar.png'),
+                  ),
+                  const SizedBox(height: 8),
+                  // User name text
+                  Text(
+                    'Name: ${user?.displayName ?? 'Full Name'}',
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                  ),
+
+                  // User email text
+                  Text(
+                    'Email: ${user?.email ?? 'Email'}',
+
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.white70,
+                    ),
+                  ),
+                ],
+              ),
+            ),],
+        ),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
