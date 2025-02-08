@@ -26,3 +26,12 @@ A Flutter task to make  shopping application that allows users to sign up, sign 
 - `Arabic` : Adding Arabic language
 - `English` : Adding English language
 
+
+**For Access Device Features - Libraries to Device Features - Add Biometric Authentication using Fingerprint (Bonus task)
+You will find in the biometric_fingerprint branch that the first project has not been graded yet**
+
+https://github.com/user-attachments/assets/72221ba8-a8d4-4fcc-b7d4-67420794ab17
+
+
+
+![image](https://github.com/user-attachments/assets/b5a34283-8a63-4176-8654-f7fc1c78d01c)
