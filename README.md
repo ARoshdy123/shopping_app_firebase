@@ -29,6 +29,7 @@ A Flutter task to make  shopping application that allows users to sign up, sign 
 
 **For Access Device Features - Libraries to Device Features - Add Biometric Authentication using Fingerprint (Bonus task)
 You will find in the biometric_fingerprint branch that the first project has not been graded yet**
+P.S (Black screen on the video is for adding my fingerprint to access and login)
 
 https://github.com/user-attachments/assets/72221ba8-a8d4-4fcc-b7d4-67420794ab17
 
