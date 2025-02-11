@@ -21,6 +21,16 @@ A Flutter task to make  shopping application that allows users to sign up, sign 
 
 - `FadeTransition` : Fade transition applied on signup form before going to main page.
 
+### Applied biometric
+
+- `local_auth`: For biometric (fingerprint) authentication.
+
+### Permission used
+
+- Biometric: to enable authentication using   "androidx.biometric.auth_enabled" android:value="true"
+
+- Fingerprint: to enable authentication using "android.permission.USE_FINGERPRINT"/>
+
 ### Adding Localization
 
 - `Arabic` : Adding Arabic language

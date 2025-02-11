@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:shopping_app_firebase/widgets/biometric_auth.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -108,7 +109,13 @@ class LoginFormState extends State<LoginForm> {
                         password: passwordController.text,
                       );
                       if (credential.user != null) {
-                        Navigator.pushReplacementNamed(context, '/main');
+                        bool authenticated = await BiometricAuth.authenticate();
+                        if (authenticated){
+                        Navigator.pushReplacementNamed(context, '/main');}
+                        else {ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                              content: Text('Biometric authentication failed')),
+                        );}
                       }
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'user-not-found') {

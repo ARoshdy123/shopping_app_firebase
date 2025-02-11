@@ -32,9 +32,9 @@ class GridViewProduct extends StatelessWidget {
           child: Column(
             children: [
               Image.network(products[index]['image']!, height: screenWidth*0.3, width: screenWidth *0.5),
-              const SizedBox(height: 10),
+              const SizedBox(height: 8),
               Text(products[index]['name']!.tr(),),
-              const SizedBox(height: 10),
+              const SizedBox(height: 8),
               IconButton(
                 alignment: Alignment.bottomCenter,
                 icon: const Icon(Icons.add_shopping_cart),

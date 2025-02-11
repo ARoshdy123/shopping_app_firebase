@@ -6,12 +6,12 @@ import 'package:shopping_app_firebase/screens/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
-void main() async {
-
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  WidgetsFlutterBinding.ensureInitialized();
+
   await EasyLocalization.ensureInitialized();
   runApp(
     EasyLocalization(
@@ -27,7 +27,8 @@ class ShoppingApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(debugShowCheckedModeBanner: false,theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+      useMaterial3: true,),
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
