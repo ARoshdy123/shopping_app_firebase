@@ -46,7 +46,8 @@ P.S (Black screen on the video is for adding my fingerprint to access and login)
 **Added Beta testing using app distribution - `Testing app link` "https://appdistribution.firebase.dev/i/1383e14693e965d0"
 - flutter pub add firebase_core
 - flutter build apk: to upload the APK on app distribution on firebase for project beta testing.
-- 
+
+
 https://github.com/user-attachments/assets/72221ba8-a8d4-4fcc-b7d4-67420794ab17
 
 
